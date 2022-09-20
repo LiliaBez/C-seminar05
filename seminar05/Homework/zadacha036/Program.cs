@@ -5,7 +5,7 @@
 int size = 10;
 int[] array = FillArray(size);
 PrintArray(array);
-Console.WriteLine($"Сумма нечентных элементов: {FindSumOfOdd(array)}");
+Console.WriteLine($"Сумма нечетных элементов: {FindSumOfOdd(array)}");
 
 
 int[] FillArray (int size)
@@ -14,7 +14,7 @@ int[] FillArray (int size)
 
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(0, 10);
+        array[i] = new Random().Next(-100, 100);
     }
     return array;
 }
