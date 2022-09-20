@@ -1,12 +1,15 @@
 ﻿/*Задайте массив вещественных чисел. Найдите 
 разницу между максимальным и минимальным элементов массива.*/
 
-//Я еще работаю над ней, надеюсь успею до Вашей проверки))
+//функции FindMaxNum и FindMinNum, наверное, можно сделать в одной, но
+//на семинаре говорили, что лучше, если одна функция выводит один результат..
 
 int size = 5;
 double[] array = FillArray(size);
-PrintArray(FillArray(size));
-PrintArray(FindMaxNum(array));
+PrintArray(array);
+Console.WriteLine($"Максимальный элемент массива: {FindMaxNum(array)}");
+Console.WriteLine($"Минимальный элемент массива: {FindMinNum(array)}");
+Console.WriteLine($"Разница между ними равна: {FindMaxNum(array) - FindMinNum(array)}");
 
 
 
@@ -32,8 +35,23 @@ double FindMaxNum (double[] array)
     double max = array[0];
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] > max);
+        if (array[i] > max)
+        {
         max = array[i];
+        }
     }
     return max;
+}
+
+double FindMinNum (double[] array)
+{
+    double min = array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min)
+        {
+        min = array[i];
+        }
+    }
+    return min;
 }
